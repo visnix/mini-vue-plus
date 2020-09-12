@@ -18,7 +18,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "scripts": {
-    "dev": "webpack-dev-server --open --mode development",
+    "dev": "webpack-dev-server --open --mode development --port 7898",
     "build": "webpack --config webpack.config.js --mode production"
   },
   "repository": {

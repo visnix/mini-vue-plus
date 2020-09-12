@@ -3,10 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = {
-    entry: './src/main.js',
+    entry:{
+        'mini-vue.min': './src/main.js',
+        index: './index.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'mini-vue.min.js'
+        filename: '[name].js',
     },
     devServer: {
         contentBase: './dist',
