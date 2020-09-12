@@ -1,6 +1,6 @@
 我们都知道，当数据改变时，会执行watcher的update方法去重新渲染DOM
 假如在一个函数里执行这些操作
-```
+```js
 this.age++
 this.age++
 this.age++
@@ -10,7 +10,7 @@ this.age++
 如果有大量的数据像上面函数那样操作 会对页面造成很大的负担 所以为了解决这个问题推出了nextTick异步更新
 原理是这样的 每次数据变更时 执行watcher.update方法 但是不会立刻执行指令的更新函数 而是把这个更新指令推入到一个数组 而这个数组是会异步更新
 也就是
-```
+```js
 function nextTick(fn) {
   setTimeout(function(){
     // 在这里更新数组里的所有指令

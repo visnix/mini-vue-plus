@@ -1,11 +1,12 @@
 在项目首页上的图片相信大家都是看过的，在这里再用文字描述一下new一个实例时的具体走向
 假设我这样new一个实例
-```
+```html
 <div id="app">
   {{name}}
 </div>
+```
 
-
+```js
 const vm = new Vue({
   el: '#app',
   data: {
@@ -19,7 +20,7 @@ const vm = new Vue({
 })
 ```
 显然 最终div里的{{name}}会被渲染成为小明 当你手动修改name的值时
-```
+```js
 vm.name = '小马'
 ```
 div里的值也会变成小马 
@@ -41,7 +42,7 @@ div里的值也会变成小马
   当对这一个key赋值时 就会触发setter里的dep.notify方法 通知dep收集的所有watcher实例调用update方法进行更新
 * 上一步完成之后就会调用compile函数开始对DOM进行解析了 例子里的div只有一个文本节点 首先会解析div 然后再解析div里的{{name}} 因为div没有指令
   所以解析完后不会生成指令 解析{{name}}时会生成一个text指令 并把{{name}}替换为一个空的文本节点 然后生成一个描述符对象 
-  ```
+  ```js
   descriptor = {
     name: 'text',
     expression: 'name',

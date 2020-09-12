@@ -7,7 +7,7 @@ ViewModel如何编写？需要用JavaScript编写一个通用的ViewModel，这�
 
 一个MVVM框架和jQuery操作DOM相比有什么区别？
 我们先看用jQuery实现的修改两个DOM节点的例子：
-```
+```html
 <!-- HTML -->
 <p>Hello, <span id="name">Bart</span>!</p>
 <p>You are <span id="age">12</span>.</p>
@@ -17,7 +17,7 @@ Hello, Bart!
 You are 12.
 ```
 用jQuery修改name和age节点的内容：
-```
+```js
 var name = 'Homer';
 var age = 51;
 
@@ -26,7 +26,7 @@ $('#age').text(age);
 ```
 
 如果我们使用MVVM框架来实现同样的功能，我们首先并不关心DOM的结构，而是关心数据如何存储。最简单的数据存储方式是使用JavaScript对象：
-```
+```js
 var person = {
     name: 'Bart',
     age: 12
@@ -35,7 +35,7 @@ var person = {
 我们把变量person看作Model，把HTML某些DOM节点看作View，并假定它们之间被关联起来了。
 
 要把显示的name从Bart改为Homer，把显示的age从12改为51，我们并不操作DOM，而是直接修改JavaScript对象：
-```
+```js
 person.name = 'Homer';
 person.age = 51;
 ```
@@ -44,4 +44,4 @@ person.age = 51;
 
 这就是MVVM的设计思想：关注Model的变化，让MVVM框架去自动更新DOM的状态，从而把开发者从操作DOM的繁琐步骤中解脱出来！
 下图可以很好的解释view viewModel model之间的关系
-![mvvm](https://github.com/woai3c/mini-vue/blob/master/imgs/mvvm.jpg)
+![mvvm](../imgs/mvvm.jpg)
