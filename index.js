@@ -1,3 +1,6 @@
+
+import MiniVue from './src/main.js'
+
 const objd = {
     bind() {
         console.log('bind')

@@ -1,4 +1,5 @@
 import {hasOwn, extend, isArray, set} from './index.js'
+import MiniVue from '../main.js'
 
 const hyphenateRE = /([^-])([A-Z])/g
 

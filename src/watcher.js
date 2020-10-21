@@ -1,5 +1,5 @@
 import Dep from './dep.js'
-import {isObject, extend, makeGetterFn, isArray} from './utils'
+import {isObject, extend, makeGetterFn, isArray} from './utils/index.js'
 
 // watcher实例的ID 每个watcher实现的ID都是唯一的
 let uid = 0

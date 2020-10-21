@@ -1,5 +1,5 @@
 import Directive from './directive.js'
-import {toArray, replace, getAttr, getBindAttr} from './utils'
+import {toArray, replace, getAttr, getBindAttr} from './utils/index.js'
 import {defineReactive} from './observer.js'
 
 // 指令描述符容器

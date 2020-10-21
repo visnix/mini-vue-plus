@@ -1,4 +1,8 @@
 # MiniVue
+## 调试方法
+
+`npm start`, 然后断点调试
+
 克隆项目之后 运行
 ```
 npm run dev

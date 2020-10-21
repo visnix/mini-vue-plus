@@ -2,13 +2,13 @@ import observe from './observer.js'
 import {Watcher, nextTick} from './watcher.js'
 import {toArray, isArray, addClass, extend, hasOwn, replace, query, bind, 
         firstWordtoUpper, toUpper, trimNode, isTrimmable, 
-        mergeOptions, mergeAttrs} from './utils'
+        mergeOptions, mergeAttrs} from './utils/index.js'
 import {compile, compileProps} from './compile.js'
 import directives from './directives.js'
 import Dep from './dep.js'
 
 // MiniVue构造函数 参数是一个对象
-function MiniVue(options) {
+export default function MiniVue(options) {
     this._init(options)
 }
 
@@ -360,8 +360,6 @@ MiniVue.prototype = {
         compile(this, this.$el)
     }
 }
-
-window.MiniVue = MiniVue
 
 
 // 空操作
