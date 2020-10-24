@@ -3,7 +3,7 @@ import Compile from './compile.js'
 import Watcher from './watcher.js'
 
 // MiniVue构造函数 参数是一个对象
-function MiniVue(options) {
+export default function MiniVue(options) {
     // 存放观察者实例
     this._watchers = []
     // 存放文本节点 在compile上会用到
@@ -78,5 +78,3 @@ MiniVue.prototype = {
         new Watcher(this, variable, callback)
     }
 }
-
-window.MiniVue = MiniVue

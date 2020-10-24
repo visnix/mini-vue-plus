@@ -13,11 +13,13 @@
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^0.1.19",
     "html-webpack-plugin": "^3.2.0",
+    "serve": "^11.3.2",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "start": "serve . -p 7398"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>MiniVue-Demo</title>
 </head>
-</html>
+
 <body>
    <div id="app" test="1">
         <p>姓名：{{name}}</p>
@@ -14,28 +14,6 @@
         <button @click="sayHi">sayHi</button>
     </div>
 </body>
-<script>
-    const vm = new MiniVue({
-        el: '#app',
-        data: {
-            age: 18,
-            name: '小明',
-            obj: {
-                a:1
-            }
-        },
-        methods: {
-            increase() {
-                this.age++
-            },
-            sayHi() {
-                alert('hi')
-            }
-        },
-        watch: {
-            age() {
-                console.log('年龄变成了' + this.age)
-            }
-        }
-    })
-</script>
+<script src="./debugger.js"></script>
+<script type="module" src="./index.js"></script>
+</html>
